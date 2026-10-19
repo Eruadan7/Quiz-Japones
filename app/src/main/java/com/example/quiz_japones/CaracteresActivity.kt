@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 import android.widget.GridView
 import android.widget.ArrayAdapter
+import com.example.quiz_japones.model.RepositorioCaracteres
 
 class CaracteresActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,11 +16,9 @@ class CaracteresActivity : AppCompatActivity() {
 
         val gridView = findViewById<GridView>(R.id.gridViewCaracteres)
 
-        //Lista com 10 caracteres
-        val caracteres = listOf(
-            "あ (a)", "い (i)", "う (u)", "え (e)", "お (o)",
-            "か (ka)", "き (ki)", "く (ku)", "け (ke)", "こ (ko)"
-        )
+        val caracteres = RepositorioCaracteres.todosOsCaracteres.map {
+            "${it.simbolo} (${it.romaji})"
+        }
 
         val adapter = ArrayAdapter(
             this,
