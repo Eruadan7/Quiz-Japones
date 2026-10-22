@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fundo">#FF5722</color>
     <color name="textTitulo">#212121</color>
+    <color name="verde_correto">#4CAF50</color>
+    <color name="vermelho_errado">#F44336</color>
 </resources>

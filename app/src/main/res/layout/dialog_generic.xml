@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Título ou mensagem principal -->
+    <TextView
+        android:id="@+id/tvDialogTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Título do Diálogo"
+        android:textColor="@color/textTitulo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Subtítulo ou mensagem de apoio -->
+    <TextView
+        android:id="@+id/tvDialogMensagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensagem de exemplo..."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+
+    <FrameLayout
+        android:id="@+id/flDialogConteudo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
