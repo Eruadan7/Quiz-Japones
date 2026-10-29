@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -38,14 +39,19 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.compose.bom))
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.ui.graphics)
     implementation(libs.material)
     testImplementation(libs.junit)
+    androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
     // Compose BOM (gerencia as versões automaticamente)
     val composeBom = platform(libs.compose.bom)
     implementation(composeBom)
@@ -59,4 +65,5 @@ dependencies {
 
     // Integração com Activity (necessário para setContent)
     implementation(libs.activity.compose)
+    debugImplementation(libs.androidx.ui.test.manifest)
 }

@@ -28,5 +28,10 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 startActivity(intentCaracteres)
             }
+
+        findViewById<Button>(R.id.btnSobre).setOnClickListener {
+            val intent = Intent(this, SobreActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

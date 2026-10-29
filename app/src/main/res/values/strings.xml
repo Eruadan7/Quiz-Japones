@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Quiz Japonês!</string>
+    <string name="title_activity_sobre">SobreActivity</string>
 </resources>
